@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Servimoto Linares</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Montserrat;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+background:#111;
+padding:12px 25px;
+border-radius:40px;
+display:flex;
+gap:20px;
+align-items:center;
+z-index:999;
+}
+
+nav a{
+color:#bbb;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
+linear-gradient(#ff6a00 1px, transparent 1px),
+linear-gradient(90deg,#ff6a00 1px, transparent 1px);
+
+background-size:
+cover,
+60px 60px,
+60px 60px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:120px;
+font-weight:800;
+}
+
+.hero span{
+color:#ff6a00;
+}
+
+.hero h2{
+margin-top:10px;
+color:#aaa;
+letter-spacing:4px;
+}
+
+.hero p{
+margin-top:20px;
+max-width:600px;
+color:#ccc;
+}
+
+/* BOTONES */
+
+.botones{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.boton1{
+background:#ff6a00;
+padding:15px 30px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.boton2{
+border:1px solid #555;
+padding:15px 30px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+}
+
+/* STATS */
+
+.stats{
+background:#ff6a00;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+text-align:center;
+padding:40px 10px;
+}
+
+.stat h3{
+font-size:40px;
+}
+
+.stat p{
+font-size:14px;
+}
+
+/* SERVICIOS */
+
+.servicios{
+padding:80px 10%;
+}
+
+.servicios h2{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+}
+
+.servicios span{
+color:#ff6a00;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#121212;
+border:1px solid #2a2a2a;
+border-radius:14px;
+padding:25px;
+transition:0.3s;
+}
+
+.card:hover{
+border-color:#ff6a00;
+transform:translateY(-5px);
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+}
+
+/* FORMULARIO */
+
+.formulario{
+padding:80px 10%;
+background:#111;
+}
+
+.formulario h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea{
+padding:14px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:15px;
+background:#ff6a00;
+border:none;
+border-radius:8px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CONTACTO */
+
+.contacto{
+padding:80px 10%;
+text-align:center;
+}
+
+.contacto p{
+margin:10px 0;
+}
+
+.mapa{
+margin-top:20px;
+}
+
+.mapa a{
+display:inline-block;
+margin-top:15px;
+background:#ff6a00;
+padding:12px 25px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+}
+
+/* BOTON WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
+z-index:999;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<strong>SERVI<span style="color:#ff6a00">MOTO</span></strong>
+
+<a href="#">Servicios</a>
+<a href="#">Cita</a>
+<a href="#">Contacto</a>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>SERVI<span>MOTO</span></h1>
+
+<h2>LINARES</h2>
+
+<p>
+Tu taller de confianza para motos en Jaén.
+Mecánica general, revisiones, neumáticos y mucho más.
+</p>
+
+<div class="botones">
+
+<a class="boton1" href="tel:953225766">
+📞 Llamar
+</a>
+
+<a class="boton2" href="#cita">
+Pedir cita
+</a>
+
+</div>
+
+</section>
+
+
+<section class="stats">
+
+<div class="stat">
+<h3>+20</h3>
+<p>Años de experiencia</p>
+</div>
+
+<div class="stat">
+<h3>+5.000</h3>
+<p>Motos revisadas</p>
+</div>
+
+<div class="stat">
+<h3>60</h3>
+<p>Reseñas Google</p>
+</div>
+
+<div class="stat">
+<h3>3.9★</h3>
+<p>Valoración media</p>
+</div>
+
+</section>
+
+
+<section class="servicios">
+
+<h2>NUESTROS <span>SERVICIOS</span></h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Mecánica General</h3>
+<p>Reparaciones completas y mantenimiento.</p>
+</div>
+
+<div class="card">
+<h3>Revisiones</h3>
+<p>Revisiones periódicas para mantener tu moto perfecta.</p>
+</div>
+
+<div class="card">
+<h3>Neumáticos</h3>
+<p>Montaje y equilibrado de neumáticos.</p>
+</div>
+
+<div class="card">
+<h3>Diagnóstico</h3>
+<p>Detección de fallos electrónicos.</p>
+</div>
+
+<div class="card">
+<h3>Suspensión</h3>
+<p>Revisión de amortiguadores y dirección.</p>
+</div>
+
+<div class="card">
+<h3>Preparación ITV</h3>
+<p>Preparamos tu moto para pasar la ITV.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="cita" class="formulario">
+
+<h2>Pedir cita</h2>
+
+<form id="formCita" action="https://formsubmit.co/joseazor87@gmail.com" method="POST">
+
+<input type="text" name="Nombre" placeholder="Nombre" required>
+
+<input type="tel" name="Telefono" placeholder="Teléfono" required>
+
+<textarea name="Problema" placeholder="Describe tu problema" required></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nueva solicitud de cita - Servimoto">
+
+<button type="submit">Enviar solicitud</button>
+
+<p id="mensajeEnviado" style="display:none;text-align:center;margin-top:10px;color:#aaa;">
+✅ Solicitud enviada. Te contestaremos lo antes posible.
+</p>
+
+</form>
+
+</section>
+
+
+<section class="contacto">
+
+<h2>Contacto</h2>
+
+<p>📍 Calle Pintor Zabaleta 8, Jaén</p>
+
+<p>📞 953 22 57 66</p>
+
+<p>🕒 Lunes a Viernes</p>
+
+<div class="mapa">
+
+<iframe
+src="https://maps.google.com/maps?q=servimoto%20jaen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300">
+</iframe>
+
+<a href="https://maps.google.com/?q=servimoto+jaen" target="_blank">
+Ver en Google Maps
+</a>
+
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/34953225766?text=Hola,%20quiero%20pedir%20cita%20para%20mi%20moto" target="_blank">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+<path d="M20.52 3.48A11.94 11.94 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.9c0 2.1.55 4.16 1.6 5.98L0 24l6.27-1.64a11.9 11.9 0 0 0 5.78 1.48h.01c6.55 0 11.89-5.33 11.89-11.9 0-3.18-1.24-6.17-3.43-8.46z"/>
+</svg>
+
+</a>
+
+<script>
+
+const form = document.getElementById("formCita");
+const mensaje = document.getElementById("mensajeEnviado");
+
+form.addEventListener("submit", function(){
+setTimeout(function(){
+mensaje.style.display="block";
+form.reset();
+},500);
+});
+
+</script>
+
+</body>
+</html>
