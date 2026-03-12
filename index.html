@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SERVICASA Linares</title>
+<title>Servimoto Linares</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -259,7 +259,128 @@ transition:0.3s;
 .whatsapp:hover{
 transform:scale(1.1);
 }
+/* =========================
+RESPONSIVE TABLET
+========================= */
 
+@media (max-width:1024px){
+
+.hero h1{
+font-size:90px;
+}
+
+.servicios{
+padding:70px 6%;
+}
+
+.formulario{
+padding:70px 6%;
+}
+
+.contacto{
+padding:70px 6%;
+}
+
+}
+
+
+/* =========================
+RESPONSIVE MOVIL
+========================= */
+
+@media (max-width:768px){
+
+nav{
+width:90%;
+justify-content:center;
+gap:15px;
+padding:10px 15px;
+}
+
+.hero{
+padding-top:120px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero h2{
+font-size:20px;
+letter-spacing:2px;
+}
+
+.hero p{
+font-size:14px;
+max-width:90%;
+}
+
+.botones{
+flex-direction:column;
+align-items:center;
+}
+
+.boton1,
+.boton2{
+width:220px;
+text-align:center;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.stat h3{
+font-size:30px;
+}
+
+.servicios{
+padding:60px 20px;
+}
+
+.servicios h2{
+font-size:28px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.formulario{
+padding:60px 20px;
+}
+
+.contacto{
+padding:60px 20px;
+}
+
+}
+
+
+/* =========================
+MOVILES PEQUEÑOS
+========================= */
+
+@media (max-width:480px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:16px;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+nav a{
+display:none;
+}
+
+}
 </style>
 </head>
 
