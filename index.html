@@ -393,6 +393,57 @@ transition:all 0.8s ease;
 opacity:1;
 transform:translateY(0);
 }
+/* RESEÑAS */
+
+.reseñas{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,300px));
+gap:25px;
+justify-content:center;
+max-width:1100px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.reseña{
+background:#121212;
+border:1px solid #2a2a2a;
+border-radius:12px;
+padding:20px;
+text-align:left;
+transition:0.3s;
+}
+
+.reseña:hover{
+border-color:#ff6a00;
+transform:translateY(-5px);
+}
+
+.estrellas{
+color:#ffb400;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.reseña p{
+color:#bbb;
+font-size:14px;
+line-height:1.5;
+margin-bottom:10px;
+}
+
+.reseña strong{
+color:white;
+font-size:14px;
+}
+.reseñas-seccion h2{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+letter-spacing:4px;
+font-weight:800;
+}
 </style>
 </head>
 
@@ -458,7 +509,41 @@ Pedir cita
 </div>
 
 </section>
+<section class="reseñas-seccion reveal">
 
+<h2><br> RESEÑAS DE <span>NUESTROS CLIENTES</span></h2>
+
+<div class="reseñas">
+
+<div class="reseña">
+<div class="estrellas">★★★★★</div>
+<p>
+Excelente atención al cliente. Revisan sin compromiso y te informan del estado de tu moto y te aconsejan qué debes hacerle, con presupuesto previo. También cambio de neumáticos. Un 10 para Servimoto.
+</p>
+<strong>Jose Garcia</strong>
+</div>
+
+
+
+<div class="reseña">
+<div class="estrellas">★★★★★</div>
+<p>
+Muy buen trato tanto por parte de la recepción como de los mecánicos. Llevo muchos años con ellos y sin duda es mi taller de confianza.
+</p>
+<strong>Christian Garcia Alcazar</strong>
+</div>
+
+<div class="reseña">
+<div class="estrellas">★★★★★</div>
+<p>
+Me parece alucinante el trabajo, trato y compromiso que este taller da a sus clientes. Personal insuperable, siempre te atienden de lujo.
+</p>
+<strong>Juanito Maravilla Gomez</strong>
+</div>
+
+</div>
+
+</section>
 
 <section id="servicios" class="servicios reveal">
 
@@ -511,7 +596,7 @@ Pedir cita
 
 <input type="tel" name="Telefono" placeholder="Teléfono" required>
 
-<textarea name="Problema" placeholder="Describe tu problema" required></textarea>
+<textarea name="Problema" placeholder="¿Qué le pasa a tu moto?" required></textarea>
 
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="Nueva solicitud de cita - Servimoto">
