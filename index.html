@@ -381,6 +381,18 @@ display:none;
 }
 
 }
+/* ANIMACIONES SCROLL */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
 </style>
 </head>
 
@@ -448,38 +460,38 @@ Pedir cita
 </section>
 
 
-<section id="servicios" class="servicios">
+<section id="servicios" class="servicios reveal">
 
 <h2>NUESTROS <span>SERVICIOS</span></h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="card reveal">
 <h3>Mecánica General</h3>
 <p>Reparaciones completas y mantenimiento.</p>
 </div>
 
-<div class="card">
+<div class="card reveal">
 <h3>Revisiones</h3>
 <p>Revisiones periódicas para mantener tu moto perfecta.</p>
 </div>
 
-<div class="card">
+<div class="card reveal">
 <h3>Neumáticos</h3>
 <p>Montaje y equilibrado de neumáticos.</p>
 </div>
 
-<div class="card">
+<div class="card reveal">
 <h3>Diagnóstico</h3>
 <p>Detección de fallos electrónicos.</p>
 </div>
 
-<div class="card">
+<div class="card reveal">
 <h3>Suspensión</h3>
 <p>Revisión de amortiguadores y dirección.</p>
 </div>
 
-<div class="card">
+<div class="card reveal">
 <h3>Preparación ITV</h3>
 <p>Preparamos tu moto para pasar la ITV.</p>
 </div>
@@ -489,7 +501,7 @@ Pedir cita
 </section>
 
 
-<section id="cita" class="formulario">
+<section id="cita" class="formulario reveal">
 
 <h2>Pedir cita</h2>
 
@@ -515,7 +527,7 @@ Pedir cita
 </section>
 
 
-<section id="contacto" class="contacto">
+<section id="contacto" class="contacto reveal">
 
 <h2>Contacto</h2>
 
@@ -561,6 +573,26 @@ form.reset();
 },500);
 });
 
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+const windowHeight = window.innerHeight;
+
+reveals.forEach(reveal =>{
+
+const elementTop = reveal.getBoundingClientRect().top;
+const visible = 100;
+
+if(elementTop < windowHeight - visible){
+reveal.classList.add("active");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 </script>
 
 </body>
