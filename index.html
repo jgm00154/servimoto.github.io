@@ -4,12 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Servimoto Linares</title>
+<title>Caceres Motors Salamanca</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-
+:root{
+--color-principal:#ff6a00;
+}
 *{
 margin:0;
 padding:0;
@@ -30,12 +32,16 @@ top:15px;
 left:50%;
 transform:translateX(-50%);
 background:#111;
-padding:12px 25px;
+padding:12px 20px;
 border-radius:40px;
 display:flex;
-gap:20px;
+gap:15px;
 align-items:center;
 z-index:999;
+max-width:95%;
+flex-wrap:wrap;
+justify-content:space-between;
+width:95%;
 }
 
 nav a{
@@ -55,8 +61,8 @@ min-height:100vh;
 
 background:
 linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
-linear-gradient(#ff6a00 1px, transparent 1px),
-linear-gradient(90deg,#ff6a00 1px, transparent 1px);
+linear-gradient(var(--color-principal) 1px, transparent 1px),
+linear-gradient(90deg,var(--color-principal) 1px, transparent 1px);
 
 background-size:
 cover,
@@ -72,12 +78,13 @@ padding:20px;
 }
 
 .hero h1{
-font-size:120px;
+font-size:clamp(34px, 12vw, 110px);
 font-weight:800;
+line-height:1.1;
 }
 
 .hero span{
-color:#ff6a00;
+color:var(--color-principal);
 }
 
 .hero h2{
@@ -103,7 +110,7 @@ justify-content:center;
 }
 
 .boton1{
-background:#ff6a00;
+background:var(--color-principal);
 padding:15px 30px;
 border-radius:10px;
 color:white;
@@ -122,7 +129,7 @@ text-decoration:none;
 /* STATS */
 
 .stats{
-background:#ff6a00;
+background:var(--color-principal);
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 text-align:center;
@@ -137,10 +144,71 @@ font-size:40px;
 font-size:14px;
 }
 
+/* RESEÑAS */
+
+.reseñas{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,300px));
+gap:25px;
+justify-content:center;
+max-width:1100px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.reseña{
+background:#121212;
+border:1px solid #2a2a2a;
+border-radius:12px;
+padding:20px;
+text-align:left;
+transition:0.3s;
+}
+
+.reseña:hover{
+border-color:var(--color-principal);
+transform:translateY(-5px);
+}
+
+.estrellas{
+color:#ffb400;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.reseña p{
+color:#bbb;
+font-size:14px;
+line-height:1.5;
+margin-bottom:10px;
+}
+
+.reseña strong{
+color:white;
+font-size:14px;
+}
+
+.reseñas-seccion{
+padding:80px 6%;
+}
+
+.reseñas-seccion h2{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+letter-spacing:4px;
+font-weight:800;
+}
+
+.reseñas-seccion span{
+color:var(--color-principal);
+}
+
 /* SERVICIOS */
 
 .servicios{
-padding:80px 10%;
+padding:80px 6%;
 }
 
 .servicios h2{
@@ -150,7 +218,7 @@ margin-bottom:50px;
 }
 
 .servicios span{
-color:#ff6a00;
+color:var(--color-principal);
 }
 
 .grid{
@@ -168,7 +236,7 @@ transition:0.3s;
 }
 
 .card:hover{
-border-color:#ff6a00;
+border-color:var(--color-principal);
 transform:translateY(-5px);
 }
 
@@ -180,7 +248,7 @@ font-size:14px;
 /* FORMULARIO */
 
 .formulario{
-padding:80px 10%;
+padding:80px 6%;
 background:#111;
 }
 
@@ -205,7 +273,7 @@ border:none;
 
 button{
 padding:15px;
-background:#ff6a00;
+background:var(--color-principal);
 border:none;
 border-radius:8px;
 color:white;
@@ -216,7 +284,7 @@ cursor:pointer;
 /* CONTACTO */
 
 .contacto{
-padding:80px 10%;
+padding:80px 6%;
 text-align:center;
 }
 
@@ -231,7 +299,7 @@ margin-top:20px;
 .mapa a{
 display:inline-block;
 margin-top:15px;
-background:#ff6a00;
+background:var(--color-principal);
 padding:12px 25px;
 border-radius:8px;
 color:white;
@@ -259,117 +327,29 @@ transition:0.3s;
 .whatsapp:hover{
 transform:scale(1.1);
 }
-/* =========================
-RESPONSIVE TABLET
-========================= */
 
-@media (max-width:1024px){
-
-.hero h1{
-font-size:90px;
-}
-
-.servicios{
-padding:70px 6%;
-}
-
-.formulario{
-padding:70px 6%;
-}
-
-.contacto{
-padding:70px 6%;
-}
-
-}
-
-
-/* =========================
-RESPONSIVE MOVIL
-========================= */
+/* RESPONSIVE */
 
 @media (max-width:768px){
-
-nav{
-width:90%;
-justify-content:center;
-gap:15px;
-padding:10px 15px;
-}
-
-.hero{
-padding-top:120px;
-}
 
 .hero h1{
 font-size:60px;
 }
 
-.hero h2{
-font-size:20px;
-letter-spacing:2px;
-}
-
-.hero p{
-font-size:14px;
-max-width:90%;
-}
-
-.botones{
-flex-direction:column;
-align-items:center;
-}
-
-.boton1,
-.boton2{
-width:220px;
-text-align:center;
-}
-
 .stats{
 grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.stat h3{
-font-size:30px;
-}
-
-.servicios{
-padding:60px 20px;
-}
-
-.servicios h2{
-font-size:28px;
 }
 
 .grid{
 grid-template-columns:1fr;
 }
 
-.formulario{
-padding:60px 20px;
 }
-
-.contacto{
-padding:60px 20px;
-}
-
-}
-
-
-/* =========================
-MOVILES PEQUEÑOS
-========================= */
 
 @media (max-width:480px){
 
 .hero h1{
 font-size:42px;
-}
-
-.hero h2{
-font-size:16px;
 }
 
 .stats{
@@ -381,68 +361,312 @@ display:none;
 }
 
 }
-/* ANIMACIONES SCROLL */
+@media (max-width:480px){
+
+.hero h1{
+font-size:42px;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+nav a{
+display:none;
+}
+
+}
+
+/* =========================
+MOVILES PEQUEÑOS
+========================= */
+
+@media (max-width:420px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero h2{
+font-size:15px;
+}
+
+.hero p{
+font-size:13px;
+}
+
+.botones{
+flex-direction:column;
+}
+
+.boton1,
+.boton2{
+width:220px;
+text-align:center;
+}
+
+.reseñas{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+nav{
+width:90%;
+}
+
+}
+/* =========================
+ANIMACIONES SCROLL
+========================= */
 
 .reveal{
 opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
+transform:translateY(60px);
+transition:all 0.9s ease;
 }
 
 .reveal.active{
 opacity:1;
 transform:translateY(0);
 }
-/* RESEÑAS */
 
-.reseñas{
-margin-top:60px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,300px));
-gap:25px;
-justify-content:center;
-max-width:1100px;
-margin-left:auto;
-margin-right:auto;
+/* animación diferente para tarjetas */
+
+.card{
+opacity:0;
+transform:translateY(40px) scale(0.95);
+transition:all 0.6s ease;
 }
 
+.card.active{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+/* reseñas animación */
+
 .reseña{
-background:#121212;
-border:1px solid #2a2a2a;
-border-radius:12px;
-padding:20px;
-text-align:left;
-transition:0.3s;
+opacity:0;
+transform:translateY(30px);
+transition:all 0.6s ease;
+}
+
+.reseña.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* efecto hover más moderno */
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 .reseña:hover{
-border-color:#ff6a00;
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+/* =========================
+SUPER RESPONSIVE MOVILES
+========================= */
+
+@media (max-width:600px){
+
+.hero{
+padding:120px 20px 60px;
 }
 
-.estrellas{
-color:#ffb400;
-font-size:18px;
-margin-bottom:10px;
-}
-
-.reseña p{
-color:#bbb;
-font-size:14px;
-line-height:1.5;
-margin-bottom:10px;
-}
-
-.reseña strong{
-color:white;
+.hero p{
 font-size:14px;
 }
-.reseñas-seccion h2{
+
+.botones{
+flex-direction:column;
+width:100%;
+align-items:center;
+}
+
+.boton1,
+.boton2{
+width:220px;
 text-align:center;
-font-size:40px;
-margin-bottom:60px;
-letter-spacing:4px;
-font-weight:800;
+}
+
+.reseñas{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.reseñas-seccion,
+.servicios,
+.formulario,
+.contacto{
+padding:60px 20px;
+}
+
+nav{
+width:92%;
+}
+
+}
+@keyframes aparecerTitulo{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero h1{
+animation:aparecerTitulo 1.2s ease forwards;
+}
+/* =========================
+MENU HAMBURGUESA
+========================= */
+
+.hamburguesa{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburguesa span{
+width:25px;
+height:3px;
+background:white;
+border-radius:2px;
+transition:0.3s;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+/* MOVIL */
+
+@media (max-width:768px){
+
+.menu{
+position:absolute;
+top:70px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+background:#111;
+flex-direction:column;
+align-items:center;
+padding:20px;
+display:none;
+border-radius:12px;
+gap:10px;
+}
+
+.menu a{
+display:block;
+width:100%;
+text-align:center;
+padding:12px;
+font-size:16px;
+border-bottom:1px solid #222;
+}
+
+.menu a:last-child{
+border-bottom:none;
+}
+
+.menu.active{
+display:flex;
+}
+
+.hamburguesa{
+display:flex;
+}
+
+}
+
+.menu a{
+padding:10px;
+font-size:16px;
+}
+
+.menu.active{
+display:flex;
+}
+
+
+
+}
+/* =========================
+MOVILES UNIVERSAL
+========================= */
+
+@media (max-width:520px){
+
+.hero{
+padding:120px 15px 60px;
+}
+
+.hero p{
+font-size:14px;
+max-width:90%;
+}
+
+.botones{
+flex-direction:column;
+width:100%;
+align-items:center;
+}
+
+.boton1,
+.boton2{
+width:230px;
+text-align:center;
+}
+
+.reseñas{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+nav{
+width:94%;
+padding:10px 18px;
+}
+
+.menu{
+width:100%;
+}
+
+.reseñas-seccion,
+.servicios,
+.formulario,
+.contacto{
+padding:60px 18px;
+}
+
+iframe{
+height:250px;
+}
+
 }
 </style>
 </head>
@@ -451,30 +675,39 @@ font-weight:800;
 
 <nav>
 
-<strong>SERVI<span style="color:#ff6a00">MOTO</span></strong>
+<strong>CACERES <span style="color: var(--color-principal)">MOTORS</span></strong>
+
+<div class="menu">
 
 <a href="#servicios">Nuestros servicios</a>
 <a href="#cita">Pedir cita</a>
 <a href="#contacto">Contacto</a>
 
-</nav>
+</div>
 
+<div class="hamburguesa" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</nav>
 
 <section class="hero">
 
-<h1>SERVI<span>MOTO</span></h1>
+<h1>CACERES <span>MOTORS</span></h1>
 
-<h2>LINARES</h2>
+<h2>SALAMANCA</h2>
 
 <p>
-Tu taller de confianza para motos en Jaén.
-Mecánica general, revisiones, neumáticos y mucho más.
+Tu taller de confianza en Salamanca.
+Mecánica rápida general, revisiones, neumáticos y mucho más.
 </p>
 
 <div class="botones">
 
-<a class="boton1" href="tel:953225766">
-📞 Llamar
+<a class="boton1" href="tel:604946821">
+Llamar
 </a>
 
 <a class="boton2" href="#cita">
@@ -486,7 +719,7 @@ Pedir cita
 </section>
 
 
-<section class="stats">
+<section class="stats reveal">
 
 <div class="stat">
 <h3>+20</h3>
@@ -494,8 +727,8 @@ Pedir cita
 </div>
 
 <div class="stat">
-<h3>+5.000</h3>
-<p>Motos revisadas</p>
+<h3>+1000</h3>
+<p>Coches revisados</p>
 </div>
 
 <div class="stat">
@@ -509,41 +742,36 @@ Pedir cita
 </div>
 
 </section>
+
+
 <section class="reseñas-seccion reveal">
 
-<h2><br> RESEÑAS DE <span>NUESTROS CLIENTES</span></h2>
+<h2>RESEÑAS DE <span>NUESTROS CLIENTES</span></h2>
 
 <div class="reseñas">
 
 <div class="reseña">
 <div class="estrellas">★★★★★</div>
-<p>
-Excelente atención al cliente. Revisan sin compromiso y te informan del estado de tu moto y te aconsejan qué debes hacerle, con presupuesto previo. También cambio de neumáticos. Un 10 para Servimoto.
-</p>
+<p>Excelente atención al cliente. Revisan sin compromiso y te informan del estado de tu moto.</p>
 <strong>Jose Garcia</strong>
 </div>
 
-
-
 <div class="reseña">
 <div class="estrellas">★★★★★</div>
-<p>
-Muy buen trato tanto por parte de la recepción como de los mecánicos. Llevo muchos años con ellos y sin duda es mi taller de confianza.
-</p>
-<strong>Christian Garcia Alcazar</strong>
+<p>Muy buen trato tanto por parte de la recepción como de los mecánicos. Llevo muchos años con ellos.</p>
+<strong>Christian Garcia</strong>
 </div>
 
 <div class="reseña">
 <div class="estrellas">★★★★★</div>
-<p>
-Me parece alucinante el trabajo, trato y compromiso que este taller da a sus clientes. Personal insuperable, siempre te atienden de lujo.
-</p>
-<strong>Juanito Maravilla Gomez</strong>
+<p>Me parece alucinante el trabajo, trato y compromiso que este taller da a sus clientes.</p>
+<strong>Juanito Maravilla</strong>
 </div>
 
 </div>
 
 </section>
+
 
 <section id="servicios" class="servicios reveal">
 
@@ -551,34 +779,34 @@ Me parece alucinante el trabajo, trato y compromiso que este taller da a sus cli
 
 <div class="grid">
 
-<div class="card reveal">
+<div class="card">
 <h3>Mecánica General</h3>
 <p>Reparaciones completas y mantenimiento.</p>
 </div>
 
-<div class="card reveal">
-<h3>Revisiones</h3>
-<p>Revisiones periódicas para mantener tu moto perfecta.</p>
+<div class="card">
+<h3>Reprogramaciones</h3>
+<p>Reprogamamos tu coche a tu gusto, para una mayor potencia y autonomía.</p>
 </div>
 
-<div class="card reveal">
+<div class="card">
 <h3>Neumáticos</h3>
 <p>Montaje y equilibrado de neumáticos.</p>
 </div>
 
-<div class="card reveal">
+<div class="card">
 <h3>Diagnóstico</h3>
 <p>Detección de fallos electrónicos.</p>
 </div>
 
-<div class="card reveal">
+<div class="card">
 <h3>Suspensión</h3>
 <p>Revisión de amortiguadores y dirección.</p>
 </div>
 
-<div class="card reveal">
+<div class="card">
 <h3>Preparación ITV</h3>
-<p>Preparamos tu moto para pasar la ITV.</p>
+<p>Preparamos tu coche para pasar la ITV.</p>
 </div>
 
 </div>
@@ -590,22 +818,17 @@ Me parece alucinante el trabajo, trato y compromiso que este taller da a sus cli
 
 <h2>Pedir cita</h2>
 
-<form id="formCita" action="https://formsubmit.co/joseazor87@gmail.com" method="POST">
+<form action="https://formsubmit.co/tallerescaceresmotors@gmail.com" method="POST">
 
 <input type="text" name="Nombre" placeholder="Nombre" required>
 
 <input type="tel" name="Telefono" placeholder="Teléfono" required>
 
-<textarea name="Problema" placeholder="¿Qué le pasa a tu moto?" required></textarea>
+<textarea name="Problema" placeholder="¿Qué le pasa a tu coche?" required></textarea>
 
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="Nueva solicitud de cita - Servimoto">
 
 <button type="submit">Enviar solicitud</button>
-
-<p id="mensajeEnviado" style="display:none;text-align:center;margin-top:10px;color:#aaa;">
-✅ Solicitud enviada. Te contestaremos lo antes posible.
-</p>
 
 </form>
 
@@ -616,9 +839,9 @@ Me parece alucinante el trabajo, trato y compromiso que este taller da a sus cli
 
 <h2>Contacto</h2>
 
-<p>📍 Calle Pintor Zabaleta 8, Jaén</p>
+<p>📍 C. Miguel de Unamuno, 23, Salamanca</p>
 
-<p>📞 953 22 57 66</p>
+<p>📞 604 946 821</p>
 
 <p>🕒 Lunes a Viernes</p>
 <p>⏰ 9:00 – 14:00 | 16:00 – 19:30</p>
@@ -626,11 +849,13 @@ Me parece alucinante el trabajo, trato y compromiso que este taller da a sus cli
 <div class="mapa">
 
 <iframe
-src="https://maps.google.com/maps?q=servimoto%20jaen&t=&z=15&ie=UTF8&iwloc=&output=embed"
-width="100%" height="300">
+src="https://maps.google.com/maps?q=C.%20Miguel%20de%20Unamuno%2023%20Salamanca&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300"
+style="border:0;border-radius:10px;">
 </iframe>
 
-<a href="https://maps.google.com/?q=servimoto+jaen" target="_blank">
+<a href="https://maps.google.com/?q=C.%20Miguel%20de%20Unamuno%2023%20Salamanca" target="_blank">
 Ver en Google Maps
 </a>
 
@@ -638,38 +863,51 @@ Ver en Google Maps
 
 </section>
 
-<a class="whatsapp" href="https://wa.me/34953225766?text=Hola,%20quiero%20pedir%20cita%20para%20mi%20moto" target="_blank">
+
+<a class="whatsapp" href="https://wa.me/34604946821" target="_blank">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
 <path d="M20.52 3.48A11.94 11.94 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.9c0 2.1.55 4.16 1.6 5.98L0 24l6.27-1.64a11.9 11.9 0 0 0 5.78 1.48h.01c6.55 0 11.89-5.33 11.89-11.9 0-3.18-1.24-6.17-3.43-8.46z"/>
 </svg>
 
 </a>
-
 <script>
 
-const form = document.getElementById("formCita");
-const mensaje = document.getElementById("mensajeEnviado");
-
-form.addEventListener("submit", function(){
-setTimeout(function(){
-mensaje.style.display="block";
-form.reset();
-},500);
-});
-
 const reveals = document.querySelectorAll(".reveal");
+const cards = document.querySelectorAll(".card");
+const reviews = document.querySelectorAll(".reseña");
 
 function revealOnScroll(){
+
 const windowHeight = window.innerHeight;
 
-reveals.forEach(reveal =>{
+reveals.forEach(el =>{
 
-const elementTop = reveal.getBoundingClientRect().top;
-const visible = 100;
+const elementTop = el.getBoundingClientRect().top;
+const visible = 120;
 
 if(elementTop < windowHeight - visible){
-reveal.classList.add("active");
+el.classList.add("active");
+}
+
+});
+
+cards.forEach(el =>{
+
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+el.classList.add("active");
+}
+
+});
+
+reviews.forEach(el =>{
+
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+el.classList.add("active");
 }
 
 });
@@ -678,7 +916,15 @@ reveal.classList.add("active");
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+function toggleMenu(){
+document.querySelector(".menu").classList.toggle("active");
+}
+// cerrar menu al pulsar un enlace
+document.querySelectorAll(".menu a").forEach(link => {
+link.addEventListener("click", () => {
+document.querySelector(".menu").classList.remove("active");
+});
+});
 </script>
-
 </body>
 </html>
